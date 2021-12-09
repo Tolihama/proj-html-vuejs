@@ -1,7 +1,7 @@
 <template>
-    <header class="d-flex justify-content-around align-items-center w-100">
+    <header class="d-flex justify-content-between align-items-center w-100">
         <!-- LOGO -->
-        <div class="logo px-5 py-3 h-100 d-flex align-items-center">
+        <div class="logo h-100 d-flex align-items-center">
             <img class="h-50" src="../assets/Header/dark-logo.png" alt="Logo">
         </div>
         <!-- MAIN NAV -->
@@ -167,11 +167,16 @@ export default {
 
 // GENERAL COMPONENT
 header {
-    position: relative;
-    height: 100px;
+    position: fixed;
+    height: 90px;
     background: #fff;
     border-bottom: 1px solid $main-border;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,.1);
     z-index: 10;
+
+    .logo {
+        padding: .75rem 10rem;
+    }
 }
 
 ul {
@@ -207,9 +212,9 @@ ul {
         left: 0;
         width: 100%;
         background: #fff;
-        box-shadow: 0 10px 10px 2px rgba(0,0,0,.5);
+        box-shadow: 0 5px 5px rgba(0,0,0,.25);
         text-align: center;
-        transform: translateY(-100%);
+        transform: translateY(25%);
         transition: all .5s;
 
         li:hover {

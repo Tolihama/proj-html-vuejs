@@ -12,14 +12,20 @@
     &.btn-primary {
         color: #fff;
         background-color: $secondary;
-
-        &:hover {
-            background-color: $secondary-hover;
-        }
     }
 
     &.btn-secondary {
         color: $secondary;
         background-color: #fff;
+        box-shadow: 0 0 0 2px $main-border inset;
+
+        &:hover {
+            color: #fff;
+            box-shadow: none;
+        }
+    }
+
+    &:hover {
+        background-color: $secondary-hover;
     }
 }
