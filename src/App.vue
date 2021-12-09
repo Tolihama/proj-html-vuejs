@@ -25,6 +25,7 @@ export default {
 <style lang="scss">
 // IMPORTS
 @import './styles/vars.scss';
+@import './styles/buttons.scss';
 
 // GENERAL APP
 #app {

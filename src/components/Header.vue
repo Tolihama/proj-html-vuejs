@@ -1,5 +1,5 @@
 <template>
-    <header class="d-flex justify-content-around align-items-center">
+    <header class="d-flex justify-content-around align-items-center w-100">
         <!-- LOGO -->
         <div class="logo px-5 py-3 h-100 d-flex align-items-center">
             <img class="h-50" src="../assets/Header/dark-logo.png" alt="Logo">
@@ -167,9 +167,11 @@ export default {
 
 // GENERAL COMPONENT
 header {
+    position: relative;
     height: 100px;
     background: #fff;
     border-bottom: 1px solid $main-border;
+    z-index: 10;
 }
 
 ul {
