@@ -2,6 +2,7 @@
     <main>
         <Jumbotron />
         <Features />
+        <Carousel />
     </main>
 </template>
 
@@ -9,12 +10,15 @@
 // IMPORT COMPONENTS
 import Jumbotron from '@/components/Jumbotron.vue';
 import Features from '@/components/Features.vue';
+import Carousel from '@/components/Carousel.vue';
+
 
 export default {
     name: 'Main',
     components: {
         Jumbotron,
-        Features
+        Features,
+        Carousel
     }
 }
 </script>
