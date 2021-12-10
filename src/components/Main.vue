@@ -3,6 +3,7 @@
         <Jumbotron />
         <Features />
         <Carousel />
+        <Courses />
     </main>
 </template>
 
@@ -11,6 +12,7 @@
 import Jumbotron from '@/components/Jumbotron.vue';
 import Features from '@/components/Features.vue';
 import Carousel from '@/components/Carousel.vue';
+import Courses from '@/components/Courses.vue';
 
 
 export default {
@@ -18,7 +20,8 @@ export default {
     components: {
         Jumbotron,
         Features,
-        Carousel
+        Carousel,
+        Courses
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container">
+        <div class="container py-5">
             <!-- Titles -->
             <div class="text-center pt-5">
                 <h3>Let's Dream Big Together</h3>
@@ -33,8 +33,13 @@
                     </li>
                 </ul>
             </div>
+            <!-- Page selectors -->
+            <div class="pages pb-5 d-flex justify-content-center">
+                <div class="page active"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+            </div>
         </div>
-
     </section>
 </template>
 
@@ -136,7 +141,18 @@ section {
             vertical-align: middle;
         }
     }
-
 }
 
+.pages .page {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #d8d8d8;
+    margin: 0 .9rem;
+
+    &.active {
+        transform: scale(2);
+        background: #111111;
+    }
+}
 </style>
