@@ -4,6 +4,7 @@
         <Features />
         <Carousel />
         <Courses />
+        <Testimonial />
     </main>
 </template>
 
@@ -13,7 +14,7 @@ import Jumbotron from '@/components/Jumbotron.vue';
 import Features from '@/components/Features.vue';
 import Carousel from '@/components/Carousel.vue';
 import Courses from '@/components/Courses.vue';
-
+import Testimonial from '@/components/Testimonial.vue';
 
 export default {
     name: 'Main',
@@ -21,7 +22,8 @@ export default {
         Jumbotron,
         Features,
         Carousel,
-        Courses
+        Courses,
+        Testimonial
     }
 }
 </script>
