@@ -1,7 +1,19 @@
 <template>
     <div id="app">
+        <!-- Header -->
         <Header />
-        <Main />
+
+        <!-- Main -->
+        <main>
+            <Jumbotron />
+            <Features />
+            <Carousel />
+            <Courses />
+            <Testimonial />
+            <Newsletter />
+        </main>
+
+        <!-- Footer -->
         <Footer />
     </div>
 </template>
@@ -9,14 +21,26 @@
 <script>
 // Import components
 import Header from '@/components/Header.vue';
-import Main from '@/components/Main.vue';
+
+import Jumbotron from '@/components/Jumbotron.vue';
+import Features from '@/components/Features.vue';
+import Carousel from '@/components/Carousel.vue';
+import Courses from '@/components/Courses.vue';
+import Testimonial from '@/components/Testimonial.vue';
+import Newsletter from '@/components/Newsletter.vue';
+
 import Footer from '@/components/Footer.vue';
 
 export default {
     name: "App",
     components: {
         Header,
-        Main,
+        Jumbotron,
+        Features,
+        Carousel,
+        Courses,
+        Testimonial,
+        Newsletter,
         Footer
     },
 };
@@ -30,5 +54,9 @@ export default {
 // GENERAL APP
 #app {
     min-height: 100vh;
+
+    main {
+        padding-top: 90px;
+    }
 }
 </style>
