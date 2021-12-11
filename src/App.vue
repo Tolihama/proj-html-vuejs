@@ -30,6 +30,5 @@ export default {
 // GENERAL APP
 #app {
     min-height: 100vh;
-    // overflow: hidden;
 }
 </style>

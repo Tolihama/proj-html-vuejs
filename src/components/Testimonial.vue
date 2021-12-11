@@ -5,6 +5,11 @@
             src="../assets/Testimonial/background-map-dots-top-right-transparent.png"
             alt="Testimonial Section Background"
         />
+        <img
+            class="square-background"
+            src="../assets/Testimonial/maxcoach-shape-07-150x150.png" 
+            alt="Square Shape Background"
+        >
         <div class="row align-items-center">
             <div class="col-5 px-5">
                 <div class="video">
@@ -102,6 +107,12 @@ section {
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    .square-background {
+        position: absolute;
+        bottom: 8%;
+        transform: scale(150%);
     }
 }
 
