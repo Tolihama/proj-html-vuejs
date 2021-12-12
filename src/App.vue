@@ -9,8 +9,9 @@
             <Features />
             <Carousel />
             <Courses />
-            <Testimonial />
+            <Video />
             <Events />
+            <Reviews />
             <Newsletter />
         </main>
 
@@ -27,8 +28,9 @@ import Jumbotron from '@/components/Jumbotron.vue';
 import Features from '@/components/Features.vue';
 import Carousel from '@/components/Carousel.vue';
 import Courses from '@/components/Courses.vue';
-import Testimonial from '@/components/Testimonial.vue';
+import Video from '@/components/Video.vue';
 import Events from '@/components/Events.vue';
+import Reviews from '@/components/Reviews.vue';
 import Newsletter from '@/components/Newsletter.vue';
 
 import Footer from '@/components/Footer.vue';
@@ -41,8 +43,9 @@ export default {
         Features,
         Carousel,
         Courses,
-        Testimonial,
+        Video,
         Events,
+        Reviews,
         Newsletter,
         Footer
     },

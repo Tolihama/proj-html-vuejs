@@ -78,7 +78,7 @@
 
 <script>
 export default {
-    name: "Testimonial",
+    name: "Video",
     data() {
         return {
             activeFaq: 0,

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="container py-5">
+        <div class="container pt-5">
             <!-- Titles -->
             <TitleSection
                 h2="Upcoming Events"
@@ -37,6 +37,20 @@
                 Excited about our event? 
                 <a href="#">View all events <i class="fas fa-long-arrow-alt-right"></i></a>
             </div>
+        </div>
+        <!-- Bottom svg -->
+        <div class="bottom-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+                <path
+                    d="M 720, 200
+                    C 720, 200
+                    1100, 200
+                    1440, 0
+                    L 1440, 200
+                    L 720, 200"
+                >
+                </path>
+            </svg>
         </div>
     </section>
 </template>
@@ -99,12 +113,58 @@ export default {
 
 section {
     background: $main-bg;
+    position: relative;
+
+    // Bottom svg
+    .bottom-svg {
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+
+        svg {
+            fill: #f8f8f8;
+        }
+    }
+
+    .container {
+        position: relative;
+        padding-bottom: 100px;
+        z-index: 1;
+    }
 }
 
 // Event card
 .event {
+    position: relative;
     background: $secondary-bg;
     border-radius: 10px;
+    transition: all .5s;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: $secondary;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    &:hover {
+        background: $main-bg;
+        box-shadow: 0 0 15px 1px rgba(100, 100, 100, 0.2);
+
+        &::before {
+            opacity: 1;
+        }
+
+        .btn {
+            background: $secondary-hover;
+        }
+    }
 
     // Card left
     .event-details {
