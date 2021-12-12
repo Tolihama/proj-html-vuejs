@@ -25,7 +25,7 @@ export default {
     methods: {
         pageClicked(pageIndex) {
             this.activePage = pageIndex;
-            this.$emit('selectedPage', pageIndex);
+            this.$emit('selectedPage', pageIndex - 1);
         }
     }
 }
