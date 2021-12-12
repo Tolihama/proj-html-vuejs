@@ -10,6 +10,7 @@
             <Carousel />
             <Courses />
             <Testimonial />
+            <Events />
             <Newsletter />
         </main>
 
@@ -27,6 +28,7 @@ import Features from '@/components/Features.vue';
 import Carousel from '@/components/Carousel.vue';
 import Courses from '@/components/Courses.vue';
 import Testimonial from '@/components/Testimonial.vue';
+import Events from '@/components/Events.vue';
 import Newsletter from '@/components/Newsletter.vue';
 
 import Footer from '@/components/Footer.vue';
@@ -40,6 +42,7 @@ export default {
         Carousel,
         Courses,
         Testimonial,
+        Events,
         Newsletter,
         Footer
     },
