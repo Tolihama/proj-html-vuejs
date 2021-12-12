@@ -1,10 +1,7 @@
 <template>
     <section class="container-fluid py-5">
         <!-- Titles -->
-        <div class="text-center pt-5">
-            <h3>Let's Dream Big Together</h3>
-            <h2 class="fw-bold px-5 py-3">Explore How can I help you</h2>
-        </div>
+        <TitleSection h2="Explore How can I help you" h3="Let's Dream Big Together" />
         <!-- CARDS -->
         <div class="cards row">
             <div 
@@ -46,8 +43,13 @@
 </template>
 
 <script>
+import TitleSection from '@/components/TitleSection.vue';
+
 export default {
     name: 'Courses',
+    components: {
+        TitleSection,
+    }
 }
 </script>
 
@@ -56,14 +58,6 @@ export default {
 
 section {
     background: #fff;
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    h3 {
-        color: $secondary;
-    }
 }
 
 .cards {

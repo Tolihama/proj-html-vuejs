@@ -1,11 +1,9 @@
 <template>
+    <!-- Carousel Component -->
     <section>
         <div class="container py-5">
             <!-- Titles -->
-            <div class="text-center pt-5">
-                <h3>Let's Dream Big Together</h3>
-                <h2 class="fw-bold px-5 py-3">Explore How can I help you</h2>
-            </div>
+            <TitleSection h2="Explore How can I help you" h3="Let's Dream Big Together" />
             <!-- Cards -->
             <div class="cards py-3">
                 <ul class="row d-flex py-3">
@@ -27,25 +25,29 @@
                                 <p class="flex-grow-1 py-2">{{ item.desc }}</p>
                             </div>
                             <div class="discover text-center py-3">
-                                Discover now
+                                <span>Discover now</span>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
             <!-- Page selectors -->
-            <div class="pages pb-5 d-flex justify-content-center">
-                <div class="page active"></div>
-                <div class="page"></div>
-                <div class="page"></div>
-            </div>
+            <PageSelector :numPages="3" />
         </div>
     </section>
 </template>
 
 <script>
+// COMPONENT IMPORTS
+import TitleSection from '@/components/TitleSection.vue';
+import PageSelector from '@/components/PageSelector.vue';
+
 export default {
     name: 'Carousel',
+    components: {
+        TitleSection,
+        PageSelector,
+    },
     data() {
         return {
             list: [
@@ -79,14 +81,6 @@ ul {
 
 section {
     background-color: $secondary-bg;
-
-    h2 {
-        font-size: 3rem;
-    }
-
-    h3 {
-        color: $secondary;
-    }
 }
 
 .card {
@@ -101,9 +95,12 @@ section {
             transform: scale(110%);
         }
 
-        .discover {
+        .discover > span {
             color: #fff;
-            background: $secondary;
+        }
+
+        .discover::before {
+            transform: translateY(0);
         }
     }
 
@@ -128,22 +125,42 @@ section {
     }
 
     .discover {
+        position: relative;
         border-top: 1px solid $main-border;
-        color: $secondary;
-        font-weight: 700;
         transition: all 1s;
 
-        &::after {
-            content: '\f30b';
-            font-family: 'Font Awesome 5 Free';
+        & > span {
+            position: relative;
+            color: $secondary;
             font-weight: 700;
-            margin-left: 6px;
-            vertical-align: middle;
+            transition: all .5s;
+            z-index: 1;
+
+            &::after {
+                content: '\f30b';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 700;
+                margin-left: 6px;
+                vertical-align: middle;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            background: $secondary;
+            transform: translateY(100%);
+            transition: all .5s;
+            z-index: 0;
         }
     }
 }
 
-.pages .page {
+/* .pages .page {
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -154,5 +171,5 @@ section {
         transform: scale(2);
         background: #111111;
     }
-}
+} */
 </style>
