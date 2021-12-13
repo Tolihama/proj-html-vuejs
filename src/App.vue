@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <!-- Header -->
-        <Header />
+        <Header :data="headerData" />
 
         <!-- Main -->
         <Main />
@@ -28,6 +28,75 @@ export default {
     },
     data() {
         return {
+            headerData: {
+                menu: [
+                    {
+                        name: 'Home',
+                        url: '#',
+                        submenus: [
+                            {
+                                name: 'Link',
+                                url: '#'
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Pages',
+                        url: '#',
+                        submenus: [
+                            {
+                                name: 'Link',
+                                url: '#'
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Courses',
+                        url: '#',
+                        submenus: [
+                            {
+                                name: 'Link',
+                                url: '#'
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Features',
+                        url: '#',
+                        submenus: [
+                            {
+                                name: 'Link',
+                                url: '#'
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Shop',
+                        url: '#',
+                        submenus: [
+                            {
+                                name: 'Link',
+                                url: '#'
+                            }
+                        ]
+                    }
+                ],
+                languages: [
+                    {
+                        text: 'english',
+                        img: 'en',
+                    },
+                    {
+                        text: 'german',
+                        img: 'de',
+                    },
+                    {
+                        text: 'francais',
+                        img: 'fr',
+                    },
+                ],
+            },
+
             footerData: {
 
                 address: [

@@ -8,7 +8,7 @@
         <nav class="h-100">
             <ul class="d-flex align-items-center h-100">
                 <li 
-                    v-for="item in menu"
+                    v-for="item in data.menu"
                     :key="`menu-${item.name}`"
                     class="menu h-100 d-flex flex-column justify-content-center"
                 >
@@ -45,7 +45,7 @@
                 <i class="far fa-user-circle px-4"></i>
                 <ul class="dropdown py-3">
                     <li
-                        v-for="(lang, index) in languages"
+                        v-for="(lang, index) in languagesToChoice"
                         :key="lang.text"
                         class="w-100 py-2 d-flex align-items-center"
                         @click="setLanguage(index)"
@@ -80,83 +80,25 @@
 <script>
 export default {
     name: 'Header',
+    props: {
+        data: Object,
+    },
     data() {
         return {
-            menu: [
-                {
-                    name: 'Home',
-                    url: '#',
-                    submenus: [
-                        {
-                            name: 'Link',
-                            url: '#'
-                        }
-                    ]
-                },
-                {
-                    name: 'Pages',
-                    url: '#',
-                    submenus: [
-                        {
-                            name: 'Link',
-                            url: '#'
-                        }
-                    ]
-                },
-                {
-                    name: 'Courses',
-                    url: '#',
-                    submenus: [
-                        {
-                            name: 'Link',
-                            url: '#'
-                        }
-                    ]
-                },
-                {
-                    name: 'Features',
-                    url: '#',
-                    submenus: [
-                        {
-                            name: 'Link',
-                            url: '#'
-                        }
-                    ]
-                },
-                {
-                    name: 'Shop',
-                    url: '#',
-                    submenus: [
-                        {
-                            name: 'Link',
-                            url: '#'
-                        }
-                    ]
-                }
-            ],
-            languages: [
-                {
-                    text: 'english',
-                    img: 'en',
-                },
-                {
-                    text: 'german',
-                    img: 'de',
-                },
-                {
-                    text: 'francais',
-                    img: 'fr',
-                },
-            ],
             activeLang: {
                 text: 'english',
                 img: 'en',
             },
         }
     },
+    computed: {
+        languagesToChoice() {
+            return this.data.languages.filter(lang => this.activeLang.text !== lang.text);
+        }
+    },
     methods: {
         setLanguage(lang) {
-            this.activeLang = this.languages[lang];
+            this.activeLang = this.languagesToChoice[lang];
         }
     }
 }
