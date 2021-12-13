@@ -81,7 +81,7 @@ export default {
             const testimonialToPrint = [];
 
             // Push active item
-            testimonialToPrint.push(this.testimonials[this.activePage])
+            testimonialToPrint.push(this.testimonials[this.activePage]);
 
             // Unshift before active item
             if (this.activePage === 0) {

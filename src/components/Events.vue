@@ -140,6 +140,7 @@ section {
     border-radius: 10px;
     transition: all .5s;
     overflow: hidden;
+    cursor: pointer;
 
     &::before {
         content: '';

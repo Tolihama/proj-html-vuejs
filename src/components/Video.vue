@@ -7,9 +7,9 @@
         />
         <img
             class="square-background"
-            src="../assets/Testimonial/maxcoach-shape-07-150x150.png" 
+            src="../assets/Testimonial/maxcoach-shape-07-150x150.png"
             alt="Square Shape Background"
-        >
+        />
         <div class="row align-items-center">
             <div class="col-5 px-5">
                 <div class="video">
@@ -32,18 +32,17 @@
                     </h2>
                     <ul class="py-5">
                         <li v-for="(n, index) in 3" :key="n" class="py-3">
-                            <transition name="fade" mode="out-in">
-                                <div
-                                    :class="{ active: activeFaq === index }"
-                                    @click="setActive(index)"
-                                >
-                                    <h5 class="question fw-bold">
-                                        How can we help?
-                                    </h5>
-
+                            <div
+                                :class="{ active: activeFaq === index }"
+                                @click="setActive(index)"
+                            >
+                                <h5 class="question fw-bold pb-3">
+                                    How can we help?
+                                </h5>
+                                <transition name="fade" mode="out-in">
                                     <div
-                                        class="text fs-5 py-4"
-                                        v-show="activeFaq === index"
+                                        class="text fs-5"
+                                        v-if="activeFaq === index"
                                     >
                                         <p>
                                             Lorem ipsum dolor sit amet
@@ -66,8 +65,8 @@
                                             laboriosam.
                                         </p>
                                     </div>
-                                </div>
-                            </transition>
+                                </transition>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -182,16 +181,15 @@ section {
 // TRANSITIONS
 .fade-enter-active,
 .fade-leave-active {
-    .text {
-        transition: all 0.5s;
-    }
+    transition: all 1s;
+    padding: 0;
 }
 
 .fade-enter,
 .fade-leave-to {
-    .text {
-        transform: translateY(100%);
-        opacity: 0;
-    }
+    transform: translateY(100%);
+    transition: all 1s;
+    opacity: 0;
+    height: 0;
 }
 </style>
