@@ -36,36 +36,34 @@
                                 :class="{ active: activeFaq === index }"
                                 @click="setActive(index)"
                             >
-                                <h5 class="question fw-bold pb-3">
+                                <h5 class="question fw-bold">
                                     How can we help?
                                 </h5>
-                                <transition name="fade" mode="out-in">
-                                    <div
-                                        class="text fs-5"
-                                        v-if="activeFaq === index"
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Repellat officia illo, soluta
-                                            labore, ratione non incidunt
-                                            doloribus sint quo sit fugit
-                                            nesciunt rem impedit praesentium
-                                            consectetur dolorum temporibus quis
-                                            aliquam!
-                                        </p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Facilis praesentium aut suscipit
-                                            itaque. Fuga deleniti expedita unde
-                                            reprehenderit, corporis eveniet,
-                                            possimus dolorem magni facere, odio
-                                            harum veniam sequi doloribus
-                                            laboriosam.
-                                        </p>
-                                    </div>
-                                </transition>
+                                <div
+                                    class="text pt-3"
+                                    v-show="activeFaq === index"
+                                >
+                                    <p>
+                                        Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit.
+                                        Repellat officia illo, soluta
+                                        labore, ratione non incidunt
+                                        doloribus sint quo sit fugit
+                                        nesciunt rem impedit praesentium
+                                        consectetur dolorum temporibus quis
+                                        aliquam!
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit.
+                                        Facilis praesentium aut suscipit
+                                        itaque. Fuga deleniti expedita unde
+                                        reprehenderit, corporis eveniet,
+                                        possimus dolorem magni facere, odio
+                                        harum veniam sequi doloribus
+                                        laboriosam.
+                                    </p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -147,6 +145,7 @@ section {
 
             h5 {
                 transform: translateX(-3rem);
+                margin: 0;
                 font-size: 2rem;
                 cursor: pointer;
 
@@ -162,7 +161,15 @@ section {
                 }
             }
 
-            & > .active {
+            .text {
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                font-size: 1.1rem;
+                transition: all .5s;
+            }
+
+            .active {
                 h5 {
                     color: $secondary-text;
                     transition: all 1s;
@@ -173,23 +180,12 @@ section {
                         margin-right: 0.8rem;
                     }
                 }
+
+                .text {
+                    height: auto;
+                }
             }
         }
     }
-}
-
-// TRANSITIONS
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 1s;
-    padding: 0;
-}
-
-.fade-enter,
-.fade-leave-to {
-    transform: translateY(100%);
-    transition: all 1s;
-    opacity: 0;
-    height: 0;
 }
 </style>

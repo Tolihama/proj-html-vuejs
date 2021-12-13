@@ -219,7 +219,7 @@ export default {
     }
 
     &:hover i {
-        animation: arrow 1s;
+        animation: arrow .5s;
     }
 }
 

@@ -109,8 +109,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/vars.scss";
+// IMPORTS
+@import '../styles/globals.scss';
+@import '../styles/vars.scss';
 
+// GENERAL COMPONENT
 section {
     background: $bg-section-type-1;
     position: relative;
@@ -118,6 +121,7 @@ section {
     // Bottom svg
     .bottom-svg {
         position: absolute;
+        width: 100%;
         bottom: 0;
         z-index: 0;
 
@@ -215,8 +219,12 @@ section {
     font-weight: 600;
 
     a {
-        text-decoration: none;
         border-bottom: 1px solid #e0e0e0;
+        color: $link-secondary;
+
+        &:hover {
+            color: $link-primary;
+        }
     }
 }
 </style>
