@@ -8,6 +8,13 @@
 
         <!-- Footer -->
         <Footer :data="footerData"/>
+
+        <!-- Back to top fixed btn -->
+        <div class="to-top">
+            <a href="#">
+                <i class="fas fa-long-arrow-alt-up"></i>
+            </a>
+        </div>
     </div>
 </template>
 
@@ -189,5 +196,38 @@ export default {
 // GENERAL APP
 #app {
     min-height: 100vh;
+    position: relative;
+}
+
+.to-top a {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    right: 40px;
+    bottom: 40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: $btn-bg-primary;
+    overflow: hidden;
+
+    i {
+        font-size: 2rem;
+        color: $btn-color-primary;
+    }
+
+    &:hover i {
+        animation: arrow 1s;
+    }
+}
+
+@keyframes arrow {
+    0% {transform: translateY(0)}
+    49% {transform: translateY(-200%)}
+    50% {opacity: 0}
+    51% {transform: translateY(200%)}
+    100% {transform: translateY(0)}
 }
 </style>
