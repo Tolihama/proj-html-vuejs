@@ -1,16 +1,29 @@
-/* COLORS */
-$main: #333333;
-$secondary: #20ad96;
-$secondary-hover: #3f3a64;
-$tertiary: #79797a;
+/* COLORS TEXT */
+$main-text: #333333;
+$secondary-text: #20ad96;
+$tertiary-text: #79797a;
 
-$link: #3f3a64;
+/* COLORS LINK */
+$link-primary: #3f3a64;
+$link-secondary: #20ad96;
+
+/* COLORS BUTTON */
+$btn-bg-primary: #20ad96;
+$btn-bg-primary-hover: #3f3a64;
+$btn-color-primary: #fff;
+$btn-color-primary-hover: #fff;
+
+$btn-bg-secondary: #fff;
+$btn-color-secondary: #20ad96;
+$btn-color-secondary-hover: #fff;
 
 /* BACKGROUNDS */
-$dropdown-hover: #eceeef;
+$bg-jumbotron: #eff2f6;
+$bg-section-type-1: #fff;
+$bg-section-type-2: #f8f8f8;
+$bg-video-section: #323043;
 
-$main-bg: #fff;
-$secondary-bg: #f8f8f8;
+$dropdown-hover: #eceeef;
 
 /* BORDERS */
 $main-border: #ecf2f9;

@@ -98,7 +98,7 @@ export default {
 
 section {
     position: relative;
-    background: #323043;
+    background: $bg-video-section;
     padding: 5rem 10rem;
     color: #fff;
 
@@ -157,14 +157,14 @@ section {
                 }
 
                 &:hover {
-                    color: $secondary;
+                    color: $secondary-text;
                     transition: all 0.5s;
                 }
             }
 
             & > .active {
                 h5 {
-                    color: $secondary;
+                    color: $secondary-text;
                     transition: all 1s;
 
                     &::before {

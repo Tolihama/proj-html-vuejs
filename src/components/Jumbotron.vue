@@ -31,7 +31,7 @@ export default {
 @import '../styles/vars.scss';
 
 section {
-    background-color: #eff2f6;
+    background-color: $bg-jumbotron;
     position: relative;
 
     .background {
@@ -45,21 +45,20 @@ section {
         z-index: 2;
 
         h2 {
-            color: $main;
+            color: $main-text;
             font-size: 3rem;
         }
 
         h3 {
-            color: $secondary;
+            color: $secondary-text;
             font-weight: 600;
         }
 
         h4 {
-            color: $tertiary;
+            color: $tertiary-text;
             font-weight: 400;
             line-height: 2rem;
         }
     }
 }
-
 </style>

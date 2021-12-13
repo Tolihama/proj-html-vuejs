@@ -31,7 +31,7 @@ export default {
 @import '../styles/vars.scss';
 
 section {
-    background: #fff;
+    background: $bg-section-type-1;
     position: relative;
 
     .container {
@@ -62,7 +62,7 @@ section {
     font-weight: 700;
 
     .secondary-title {
-        color: $secondary;
+        color: $secondary-text;
         font-weight: 400;
     }
 }

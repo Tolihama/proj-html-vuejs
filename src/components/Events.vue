@@ -112,7 +112,7 @@ export default {
 @import "../styles/vars.scss";
 
 section {
-    background: $main-bg;
+    background: $bg-section-type-1;
     position: relative;
 
     // Bottom svg
@@ -136,7 +136,7 @@ section {
 // Event card
 .event {
     position: relative;
-    background: $secondary-bg;
+    background: $bg-section-type-2;
     border-radius: 10px;
     transition: all .5s;
     overflow: hidden;
@@ -149,13 +149,13 @@ section {
         height: 100%;
         left: 0;
         top: 0;
-        background: $secondary;
+        background: $link-secondary;
         opacity: 0;
         transition: opacity .5s;
     }
 
     &:hover {
-        background: $main-bg;
+        background: #fff;
         box-shadow: 0 0 15px 1px rgba(100, 100, 100, 0.2);
 
         &::before {
@@ -163,14 +163,14 @@ section {
         }
 
         .btn {
-            background: $secondary-hover;
+            background: $btn-bg-primary-hover;
         }
     }
 
     // Card left
     .event-details {
         .where {
-            color: $tertiary;
+            color: $tertiary-text;
 
             &::before {
                 content: "\f3c5";
@@ -181,7 +181,7 @@ section {
         }
 
         .title-event {
-            color: $main;
+            color: $main-text;
             font-size: 1.5rem;
             font-weight: 700;
         }
@@ -190,7 +190,7 @@ section {
     // Card right
     .event-date {
         .day {
-            color: $secondary;
+            color: $secondary-text;
             font-size: 3.5rem;
             line-height: 3.5rem;
             font-weight: 500;
@@ -210,14 +210,13 @@ section {
 
 // View all events
 .view-all {
-    color: $tertiary;
+    color: $tertiary-text;
     font-size: 1.3rem;
     font-weight: 600;
 
     a {
         text-decoration: none;
         border-bottom: 1px solid #e0e0e0;
-        color: $secondary;
     }
 }
 </style>

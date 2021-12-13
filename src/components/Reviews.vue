@@ -112,12 +112,12 @@ export default {
 @import "../styles/vars.scss";
 
 section {
-    background: $secondary-bg;
+    background: $bg-section-type-2;
 }
 
 // Review card
 .review-card {
-    background: $main-bg;
+    background: #fff;
     opacity: 0.5;
 
     &.active {
@@ -130,7 +130,7 @@ section {
     }
 
     p {
-        color: $tertiary;
+        color: $tertiary-text;
         font-size: 1.2rem;
     }
 
@@ -155,7 +155,7 @@ section {
             }
 
             h6 {
-                color: $tertiary;
+                color: $tertiary-text;
                 font-size: 1.1rem;
             }
         }

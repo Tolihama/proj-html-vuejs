@@ -81,21 +81,16 @@ export default {
 <style scoped lang="scss">
 @import '../styles/vars.scss';
 
-// GENERAL
-ul {
-    list-style: none;
-}
-
 // COMPONENT
 section {
     background: #fff;
 
     h2 {
-        color: $main;
+        color: $main-text;
     }
 
     h3 {
-        color: $secondary;
+        color: $secondary-text;
     }
 
     ul.row .left {
@@ -103,5 +98,4 @@ section {
         font-size: 2rem;
     }
 }
-
 </style>

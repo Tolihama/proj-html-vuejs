@@ -80,7 +80,7 @@ ul {
 }
 
 section {
-    background-color: $secondary-bg;
+    background-color: $bg-section-type-2;
 }
 
 .card {
@@ -119,7 +119,7 @@ section {
         }
 
         p {
-            color: $tertiary;
+            color: $tertiary-text;
             font-size: 1.2rem;
         }
     }
@@ -131,7 +131,7 @@ section {
 
         & > span {
             position: relative;
-            color: $secondary;
+            color: $secondary-text;
             font-weight: 700;
             transition: all .5s;
             z-index: 1;
@@ -152,24 +152,11 @@ section {
             height: 100%;
             left: 0;
             bottom: 0;
-            background: $secondary;
+            background: $secondary-text;
             transform: translateY(100%);
             transition: all .5s;
             z-index: 0;
         }
     }
 }
-
-/* .pages .page {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background: #d8d8d8;
-    margin: 0 .9rem;
-
-    &.active {
-        transform: scale(2);
-        background: #111111;
-    }
-} */
 </style>

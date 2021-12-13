@@ -105,6 +105,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+// IMPORTS
+@import '../styles/globals.scss';
 @import '../styles/vars.scss';
 
 // GENERAL COMPONENT
@@ -132,11 +134,6 @@ ul {
     margin: 0 1.5rem;
     padding: 0 1rem;
     font-size: 1.25rem;
-
-    a {
-        text-decoration: none;
-        color: $link;
-    }
 
     & > a::after,
     & > span::after {

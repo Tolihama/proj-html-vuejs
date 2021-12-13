@@ -57,7 +57,7 @@ export default {
 @import '../styles/vars.scss';
 
 section {
-    background: #fff;
+    background: $bg-section-type-1;
 }
 
 .cards {
@@ -92,7 +92,7 @@ section {
         cursor: pointer;
 
         .course-price {
-            color: $secondary;
+            color: $secondary-text;
         }
 
         .course-name {
@@ -119,14 +119,14 @@ section {
 }
 
 .view-all {
-    color: $tertiary;
+    color: $tertiary-text;
     font-weight: 600;
     padding: 1rem 35%;
 
     a {
         text-decoration: none;
         border-bottom: 1px solid #e0e0e0;
-        color: $main;
+        color: $main-text;
     }
 }
 </style>

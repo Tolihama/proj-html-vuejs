@@ -23,6 +23,6 @@ h2 {
 }
 
 h3 {
-    color: $secondary;
+    color: $secondary-text;
 }
 </style>

@@ -182,6 +182,7 @@ export default {
 
 <style lang="scss">
 // IMPORTS
+@import './styles/globals.scss';
 @import './styles/vars.scss';
 @import './styles/buttons.scss';
 

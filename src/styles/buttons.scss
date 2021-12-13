@@ -10,23 +10,23 @@
     transition: all .5s;
 
     &.btn-primary {
-        color: #fff;
-        background-color: $secondary;
+        color: $btn-color-primary;
+        background-color: $btn-bg-primary;
     }
 
     &.btn-secondary {
-        color: $secondary;
-        background-color: #fff;
+        color: $btn-color-secondary;
+        background-color: $btn-bg-secondary;
         box-shadow: 0 0 0 2px $main-border inset;
 
         &:hover {
-            color: #fff;
+            color: $btn-color-secondary-hover;
             box-shadow: none;
         }
     }
 
     &:hover {
-        background-color: $secondary-hover;
+        background-color: $btn-bg-primary-hover;
         cursor: pointer;
     }
 }
