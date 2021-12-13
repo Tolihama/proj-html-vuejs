@@ -5,20 +5,25 @@
             <div class="row pb-3">
                 <div class="col-6">
                     <h5 class="fw-bold">Address</h5>
-                    <div class="py-2">
-                        382 NE 111st St # 87394 Miami, FL 33179-3899
+                    <div 
+                        v-for="(addressline, i) in data.address"
+                        :key="`addressline-${i}`"
+                        class="py-2"
+                    >
+                        {{addressline}}
                     </div>
-                    <div class="py-2">
-                        +1(305) 547-9909 (9am - 5pm EST, Monday - Friday)
-                    </div>
-                    <div class="py-2">
-                        support@maxcoach.com
+                    <div class="py-2 email">
+                        <a :href="`mailto:${data.email}`">{{data.email}}</a>
                     </div>
                     <div class="social pt-4">
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
+                        <a
+                            v-for="social in data.social"
+                            :key="`social-${social.socialName}`"
+                            :href="social.url"
+                        >
+                            <i :class="social.icon"></i>
+                        </a>
+
                     </div>
                 </div>
                 <div class="col-6">
@@ -26,39 +31,23 @@
                         <div class="col-8">
                             <h5 class="fw-bold">Explore</h5>
                             <div class="row flex-wrap pb-3">
-                                <div class="col-6 py-2">
-                                    Start here
-                                </div>
-                                <div class="col-6 py-2">
-                                    Success Story
-                                </div>
-                                <div class="col-6 py-2">
-                                    Blog
-                                </div>
-                                <div class="col-6 py-2">
-                                    Courses
-                                </div>
-                                <div class="col-6 py-2">
-                                    About us
-                                </div>
-                                <div class="col-6 py-2">
-                                    Contact us
+                                <div 
+                                    v-for="(link, i) in data.explore"
+                                    :key="`explore-${i}`"
+                                    class="col-6 py-2"
+                                >
+                                    <a :href="link.url">{{ link.linkName }}</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <h5 class="fw-bold">Information</h5>
-                            <div class="py-2">
-                                Membership
-                            </div>
-                            <div class="py-2">
-                                Purchase guide
-                            </div>
-                            <div class="py-2">
-                                Privacy policy
-                            </div>
-                            <div class="py-2">
-                                Terms of service
+                            <div 
+                                v-for="(link, i) in data.information"
+                                :key="`information-${i}`"
+                                class="py-2"
+                            >
+                                <a :href="link.url">{{ link.linkName }}</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +65,10 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    props: {
+        data: Object,
+    }
 }
 </script>
 
@@ -89,10 +81,20 @@ footer {
     h5 {
         color: #fff;
     }
+
+    a {
+        text-decoration: none;
+        color: currentColor;
+        transition: all .3s;
+
+        &:hover {
+            color: #666;
+        }
+    }
 }
 
 .social {
-    & > i {
+    & > a {
         font-size: 1.6rem;
         padding: 0 1rem;
 
